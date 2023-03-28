@@ -3,7 +3,7 @@ import Dictionary from './components/Dictionary';
 
 function App() {
   return (
-    <div className="App bg-black text-white w-screen h-[200vh]">
+    <div className="App bg-gray-800 text-white w-screen h-[200vh]">
       <Dictionary />
     </div>
   );
