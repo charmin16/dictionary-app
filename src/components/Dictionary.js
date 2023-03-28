@@ -32,8 +32,8 @@ const Dictionary = () => {
     }
 
     return (
-    <div className='flex flex-col items-center md:mt-12 w-[90%] mx-auto 
-      bg-red-00 py-6 text-lg md:text-xl sm:w-[65%] md:w-[45%] space-y-8'>
+    <div className='flex flex-col items-center md:pt-12 md:pb-12 w-[85%] mx-auto 
+       py-6 text-lg md:text-xl sm:w-[65%] md:w-[45%] space-y-8'>
             <h2 className="text-xl md:text-3xl font-bold">Dictionary</h2>
             <form onSubmit={submitHandler} className='w-[100%]'>
                 <div className='relative bg-orange-900 w-[100%]'>
@@ -41,7 +41,7 @@ const Dictionary = () => {
                         onChange={(e) => setSearchWord(e.target.value)}
                         value={searchWord}
                         type="text"
-                        className='py-3 pl-6 bg-gray-300 rounded-2xl w-[100%]' />
+                        className='py-3 pl-6 bg-gray-300 rounded-2xl w-[100%] text-black' />
                     <i onClick={submitHandler} className="fa-solid fa-magnifying-glass absolute right-4 top-[31%] text-purple-500 cursor-pointer"></i>
                 </div>
             </form>
@@ -51,10 +51,10 @@ const Dictionary = () => {
                 <section id="output" className='w-[100%]'>
                     {dictDetails && (
                         <div className="flex flex-col space-y-4">
-                            <div id="entry-playzz" className='flex items-center justify-between w-[100%] px-6 py-2 bg-green-300'>
-                                <h1 className='font-bold text-3xl md:text-5xl'>{dictDetails.word}</h1>
+                            <div id="entry-playzz" className='flex items-center justify-between w-[100%] px-6 py-2 bg-gray-700'>
+                                <h1 className='font-bold text-2xl md:text-3xl'>{dictDetails.word}</h1>
                                 <a href={dictDetails.phonetics[0].audio} target="_blank" rel='noopener noreferrer'>
-                                    <i className="fa-solid fa-circle-play fa-2x text-purple-800"></i>
+                                    <i className="fa-solid fa-circle-play fa-2x"></i>
                                 </a>
                             </div>
                             <div id="phonetics">
@@ -71,7 +71,7 @@ const Dictionary = () => {
                             <div key={index} className={noun.partOfSpeech === 'noun' ? 'show' : 'hide'}>
                                 <div id="noun" className='flex justify-between px-6 w-[100%]'>
                                     <p className='font-bold w-[7%] '>noun</p>
-                                    <div className='w-[77%] md:w-[87%] h-[0.05em] opacity-80 bg-gray-200 translate-y-4'></div>
+                                    <div className='w-[70%] md:w-[80%] h-[0.05em] opacity-80 bg-gray-200 translate-y-4'></div>
                                 </div>
                                 <p className="opacity-40 italic pl-6 pt-4">Meaning</p>
                             </div>
@@ -104,7 +104,7 @@ const Dictionary = () => {
                             <div key={index} className={noun.partOfSpeech === 'verb' ? 'show' : 'hide'}>
                                 <div id="verb" className='flex justify-between px-6 w-[100%]'>
                                     <p className='font-bold w-[7%] '>verb</p>
-                                    <div className='w-[77%] md:w-[87%] h-[0.05em] opacity-80 bg-gray-200 translate-y-4'></div>
+                                    <div className='w-[70%] md:w-[80%] h-[0.05em] opacity-80 bg-gray-200 translate-y-4'></div>
                                 </div>
                                 <p className="opacity-40 italic pl-6 pt-4">Meaning</p>
                             </div>
@@ -135,7 +135,7 @@ const Dictionary = () => {
                             <div key={index} className={adj.partOfSpeech === 'adjective' ? 'show' : 'hide'}>
                                 <div id="adjective" className='flex justify-between px-6 w-[100%]'>
                                     <p className='font-bold w-[7%] '>adjective</p>
-                                    <div className='w-[75%] md:w-[85%] h-[0.05em] opacity-80 bg-gray-200 translate-y-4'></div>
+                                    <div className='w-[68%] md:w-[78%] h-[0.05em] opacity-80 bg-gray-200 translate-y-4'></div>
                                 </div>
                                 <p className="opacity-40 italic pl-6 pt-4">Meaning</p>
                             </div>
@@ -167,7 +167,7 @@ const Dictionary = () => {
                             <div key={index} className={adv.partOfSpeech === 'adverb' ? 'show' : 'hide'}>
                                 <div id="noun" className='flex justify-between px-6 w-[100%]'>
                                     <p className='font-bold w-[7%] '>adverb</p>
-                                    <div className='w-[77%] md:w-[88%] h-[0.05em] opacity-80 bg-gray-200 translate-y-4'></div>
+                                    <div className='w-[70%] md:w-[80%] h-[0.05em] opacity-80 bg-gray-200 translate-y-4'></div>
                                 </div>
                                 <p className="opacity-40 italic pl-6 pt-4">Meaning</p>
                             </div>
