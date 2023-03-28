@@ -32,9 +32,9 @@ const Dictionary = () => {
     }
 
     return (
-    <div className='flex flex-col items-center md:pt-12 md:pb-12 w-[85%] mx-auto 
+    <div className='flex flex-col items-center md:pt-12 md:pb-12 w-[90%] mx-auto 
        py-6 text-lg md:text-xl sm:w-[65%] md:w-[45%] space-y-8'>
-            <h2 className="text-xl md:text-3xl font-bold">Dictionary</h2>
+            <h2 className="text-2xl md:text-3xl font-bold">Dictionary</h2>
             <form onSubmit={submitHandler} className='w-[100%]'>
                 <div className='relative bg-orange-900 w-[100%]'>
                     <input
@@ -58,7 +58,7 @@ const Dictionary = () => {
                                 </a>
                             </div>
                             <div id="phonetics">
-                                <p className='pl-6 pb-2'>{dictDetails.phonetic}</p>
+                                <p className='pl-2 pb-2'>{dictDetails.phonetic}</p>
                             </div>
                         </div>
                     )}
@@ -69,11 +69,11 @@ const Dictionary = () => {
                     {dictDetails && (
                         dictDetails.meanings.map((noun, index) => (
                             <div key={index} className={noun.partOfSpeech === 'noun' ? 'show' : 'hide'}>
-                                <div id="noun" className='flex justify-between px-6 w-[100%]'>
+                                <div id="noun" className='flex justify-between px-2 w-[100%]'>
                                     <p className='font-bold w-[7%] '>noun</p>
                                     <div className='w-[70%] md:w-[80%] h-[0.05em] opacity-80 bg-gray-200 translate-y-4'></div>
                                 </div>
-                                <p className="opacity-40 italic pl-6 pt-4">Meaning</p>
+                                <p className="opacity-40 italic pl-2 pt-4">Meaning</p>
                             </div>
                         ))
                     )}
@@ -86,7 +86,7 @@ const Dictionary = () => {
                                 <div key={index}>
                                     {meaning.partOfSpeech === 'noun' && <div>
                                         {meaning.definitions.map((item, index) => (
-                                            <ul key={index} className='pl-12'>
+                                            <ul key={index} className='pl-8'>
                                                 <li className='list-disc py-2'>{item.definition}</li>
                                             </ul>
                                         ))}
@@ -102,11 +102,11 @@ const Dictionary = () => {
                     {dictDetails && (
                         dictDetails.meanings.map((noun, index) => (
                             <div key={index} className={noun.partOfSpeech === 'verb' ? 'show' : 'hide'}>
-                                <div id="verb" className='flex justify-between px-6 w-[100%]'>
-                                    <p className='font-bold w-[7%] '>verb</p>
+                                <div id="verb" className='flex justify-between px-2 w-[100%]'>
+                                    <p className='font-bold w-[7%]'>verb</p>
                                     <div className='w-[70%] md:w-[80%] h-[0.05em] opacity-80 bg-gray-200 translate-y-4'></div>
                                 </div>
-                                <p className="opacity-40 italic pl-6 pt-4">Meaning</p>
+                                <p className="opacity-40 italic pl-2 pt-4">Meaning</p>
                             </div>
                         ))
                     )}
@@ -118,7 +118,7 @@ const Dictionary = () => {
                                     {meaning.partOfSpeech === 'verb' && <div>
                                         {/* <li>{meaning.partOfSpeech}</li> */}
                                         {meaning.definitions.map((item, index) => (
-                                            <ul key={index} className='pl-12'>
+                                            <ul key={index} className='pl-8'>
                                                 <li className='list-disc py-2'>{item.definition}</li>
                                             </ul>
                                         ))}
@@ -133,11 +133,11 @@ const Dictionary = () => {
                     {dictDetails && (
                         dictDetails.meanings.map((adj, index) => (
                             <div key={index} className={adj.partOfSpeech === 'adjective' ? 'show' : 'hide'}>
-                                <div id="adjective" className='flex justify-between px-6 w-[100%]'>
+                                <div id="adjective" className='flex justify-between px-2 w-[100%]'>
                                     <p className='font-bold w-[7%] '>adjective</p>
                                     <div className='w-[68%] md:w-[78%] h-[0.05em] opacity-80 bg-gray-200 translate-y-4'></div>
                                 </div>
-                                <p className="opacity-40 italic pl-6 pt-4">Meaning</p>
+                                <p className="opacity-40 italic pl-2 pt-4">Meaning</p>
                             </div>
                         ))
                     )}
@@ -149,7 +149,7 @@ const Dictionary = () => {
                                     {meaning.partOfSpeech === 'adjective' && <div>
                                         {/* <li>{meaning.partOfSpeech}</li> */}
                                         {meaning.definitions.map((item, index) => (
-                                            <ul key={index} className='pl-12'>
+                                            <ul key={index} className='pl-8'>
                                                 <li className='list-disc py-2'>{item.definition}</li>
                                             </ul>
                                         ))}
@@ -165,11 +165,11 @@ const Dictionary = () => {
                     {dictDetails && (
                         dictDetails.meanings.map((adv, index) => (
                             <div key={index} className={adv.partOfSpeech === 'adverb' ? 'show' : 'hide'}>
-                                <div id="noun" className='flex justify-between px-6 w-[100%]'>
+                                <div id="noun" className='flex justify-between px-2 w-[100%]'>
                                     <p className='font-bold w-[7%] '>adverb</p>
                                     <div className='w-[70%] md:w-[80%] h-[0.05em] opacity-80 bg-gray-200 translate-y-4'></div>
                                 </div>
-                                <p className="opacity-40 italic pl-6 pt-4">Meaning</p>
+                                <p className="opacity-40 italic pl-2 pt-4">Meaning</p>
                             </div>
                         ))
                     )}
@@ -181,7 +181,7 @@ const Dictionary = () => {
                                     {meaning.partOfSpeech === 'adverb' && <div>
                                         {/* <li>{meaning.partOfSpeech}</li> */}
                                         {meaning.definitions.map((item, index) => (
-                                            <ul key={index} className='pl-12'>
+                                            <ul key={index} className='pl-8'>
                                                 <li className='list-disc py-2'>{item.definition}</li>
                                             </ul>
                                         ))}
